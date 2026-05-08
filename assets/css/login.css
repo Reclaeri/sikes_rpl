@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../image/login2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.content {
+    margin-left: 250px;
+}
+.logo img {
+  width: 80px;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0 4px;
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+}
+
+label {
+  font-size: 14px;
+  color: #34495e;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3c3d3d;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+/* ============================= */
+/* 📱 RESPONSIVE MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* Sidebar jangan dorong content */
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        transition: 0.3s;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Content full */
+    .content {
+        margin-left: 0 !important;
+        width: 100%;
+        padding: 70px 15px 20px 15px;
+    }
+
+    /* Semua box/card full width */
+    .card,
+    .box,
+    .form-container {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+
+    /* Table tidak kepotong */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+}

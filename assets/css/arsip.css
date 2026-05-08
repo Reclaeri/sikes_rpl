@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+body {
+  background: #f6f8f9;
+  display: flex;
+  min-height: 100vh;
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+  url("../image/bg2.jpeg");
+}
+.menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #555;
+  text-decoration: none;
+}
+.menu a.active,
+.menu a:hover {
+  background: #e9f5f2;
+  color: #1e7f6d;
+  border-left: 4px solid #1e7f6d;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  background: #fff;
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.back {
+  color: #F2E6E4;
+  text-decoration: none;
+  margin: 15px 25px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 25px 20px;
+}
+.poin {
+  font-size: 32px;
+  color: #e11d48;
+  font-weight: bold;
+  text-align: right;
+}
+.riwayat {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.riwayat img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.tag {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.ringan {
+  background: #fff4cc;
+}
+.sedang {
+  background: #ffe0b2;
+}
+.berat {
+  background: #fecaca;
+}
+.btn-export{
+    display:inline-block;
+    background:#1f7a6f;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:0.2s;
+}
+
+.btn-export:hover{
+    background:#176458;
+}
+/* ============================= */
+/* 📱 RESPONSIVE MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* Sidebar jangan dorong content */
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        transition: 0.3s;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Content full */
+    .content {
+        margin-left: 0 !important;
+        width: 100%;
+        padding: 70px 15px 20px 15px;
+    }
+
+    /* Semua box/card full width */
+    .card,
+    .box,
+    .form-container {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+
+    /* Table tidak kepotong */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+}
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 22px;
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 1100;
+}
+.img-bukti{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:999;
+    padding-top:100px;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.9);
+}
+
+.modal-content{
+    margin:auto;
+    display:block;
+    max-width:80%;
+    max-height:80%;
+}
+
+.close{
+    position:absolute;
+    top:40px;
+    right:60px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
